@@ -394,6 +394,10 @@ function onCreate()
 end
 
 function onCreatePost()
+    runHaxeCode([[
+        game.healthBar.createFilledBar(0xFFFCA503,0xFF00FF00);
+        game.healthBar.updateBar();
+    ]])
     defaultSpeed = getProperty('songSpeed')
     setProperty('gf.visible', false)
 
@@ -458,7 +462,6 @@ function onCreatePost()
        setScrollFactor(v, 0.1, 0.1)
        setProperty(v..'.y', getProperty(v..'.y') - 50)
        setProperty(v..'.x', getProperty(v..'.x') - 20)
-       setProperty(v..'.color', getColorFromHex("A0A0A0"))
        
        setObjectOrder(v, getObjectOrder("ground")-5)
     end
@@ -1067,7 +1070,7 @@ if curStep == 3264 then -- BG DESTROYED
 
     local hpStuff = {'healthBar', 'healthBarBG', 'healthBarOverlay', 'iconP1', 'iconP2'}
     for i, v in pairs(hpStuff) do
-        setProperty(v .. '.color', getColorFromHex("FFD0D0"))
+        --setProperty(v .. '.color', getColorFromHex("FFD0D0"))
     end
     setProperty('boyfriendGroup.color', getColorFromHex('FFD0D0'))
     setProperty('dadGroup.color', getColorFromHex('FFD0D0'))
