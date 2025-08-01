@@ -1,4 +1,4 @@
--- AMMAR HUD RECREATED BY UWENALIL!!!
+-- AMMAR HUD RECREATED BY DAVE!!!!!!
 
 local FontName = "gaposiss.ttf"
 local ComboSpriteFile = "anammar/ComboSprite"
